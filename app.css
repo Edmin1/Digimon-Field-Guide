@@ -1,0 +1,85 @@
+body {
+    color: black;
+    background-color: rgb(204, 204, 204);
+    font-family: 'Roboto';
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 64px;
+}
+
+.card-name {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 39%;
+}
+
+.card-level {
+    margin-top: 0;
+}
+
+.flipcard {
+    list-style: none;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    /* doesnt do shit */
+    perspective: 1000px;
+    color: #222;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background: white;
+    padding: 5px;
+}
+
+.flipcard-inner {
+    width: 100%;
+    height: 100%;
+    perspective: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 10px 0 grey;
+}
+
+.flipcard-front, .flipcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flipcard:hover .flipcard-inner {
+    transform: rotateX(180deg);
+}
+
+.flipcard-front {
+    background-color: white;
+    color: black;
+}
+
+.flipcard-back {
+    transform: rotateX(180deg);
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+#Digidex {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-gap: 10px;
+}
+
+
+/* music -> css */
+/* text -> transform */
